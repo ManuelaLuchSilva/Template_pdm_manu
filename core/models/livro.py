@@ -30,7 +30,7 @@ class Livro(models.Model):
         default=None,
     )
     def __str__(self):
-        return f"({self.id}) {self.titulo} de {self.autor} ({self.quantidade})"
+        return f"({self.id}) {self.titulo} de {self.autores} ({self.quantidade})"
 
 
 

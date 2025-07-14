@@ -10,12 +10,13 @@ from django.conf.urls.static import static
 from uploader.router import router as uploader_router
 from rest_framework.routers import DefaultRouter
 
-from core.views import AutorViewSet, CategoriaViewSet, EditoraViewSet, LivroViewSet, UserViewSet
+from core.views import AutorViewSet, CategoriaViewSet,CompraViewSet, EditoraViewSet, LivroViewSet, UserViewSet
 
 router = DefaultRouter()
 
 router.register(r"autor", AutorViewSet)
 router.register(r'categorias', CategoriaViewSet, basename='categorias')
+router.register(r"compra", CompraViewSet)
 router.register(r"editoras", EditoraViewSet)
 router.register(r"livro", LivroViewSet)
 router.register(r'usuarios', UserViewSet, basename='usuarios')
